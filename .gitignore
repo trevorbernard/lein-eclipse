@@ -1,6 +1,7 @@
+*.jar
 .classpath
+.lein-deps-sum
 .project
 classes
-lein-eclipse.jar
 lib
 pom.xml
