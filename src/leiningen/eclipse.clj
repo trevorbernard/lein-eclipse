@@ -44,6 +44,9 @@
 	    (if (directory? resources-path)
 		[:classpathentry {:kind "src"
 				  :path resources-path}])
+            (if (directory? (:java-source-path project))
+		[:classpathentry {:kind "src"
+				  :path (:java-source-path project)}])
 	    (if (directory? test-path)
 	      [:classpathentry {:kind "src"
 				:path test-path}])
