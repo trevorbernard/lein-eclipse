@@ -24,7 +24,7 @@
 
 (defn- list-libraries
   [project]
-  (map #(.getPath %) (.listFiles (File. (:library-path project)))))
+  (map #(.getPath %) (filter #(.isFile %) (file-seq (File. (:library-path project))))))
 
 (defn- create-classpath
   "Print .classpath to *out*."
